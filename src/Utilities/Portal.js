@@ -1,9 +1,9 @@
-import { Component } from 'react'
+import { PureComponent } from 'react'
 import ReactDOM from 'react-dom';
 
 const portalRoot = document.getElementById('portal');
 
-export default class Portal extends Component {
+export default class Portal extends PureComponent {
 
     // create
     constructor() {

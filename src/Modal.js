@@ -1,27 +1,22 @@
-import React, { Component } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import { Portal, absolute } from './Utilities';
 
-export default class Modal extends Component {
-    render() {
-       const { children, toggle, on } = this.props;
-       return (
-           <Portal>
-               {on && 
-               <ModalWrapper>
-                   <ModalCard>
-                       <CloseButton onClick={toggle}>
-                       X
-                       </CloseButton>
-                       <div>{children}</div>
-                   </ModalCard>
-                   <Background onClick={toggle} />             
-               </ModalWrapper>
-            }
-           </Portal>
-       ); 
-    }
-};
+export const Modal = React.memo(({ children, toggle, on }) => ( 
+    <Portal>
+        {on && 
+        <ModalWrapper>
+            <ModalCard>
+                <CloseButton onClick={toggle}>
+                X
+                </CloseButton>
+                <div>{children}</div>
+            </ModalCard>
+            <Background onClick={toggle} />             
+        </ModalWrapper>
+        }
+    </Portal>
+));
 
 const ModalWrapper = styled.div`
     position: fixed;
