@@ -1,3 +1,30 @@
+# Easy React Modal
+
+This is a simple React utility for implementing Modals. 
+
+Feel free to fork, clone and make your own.
+
+## A Walk Through the Files
+
+I didn't want the Modal divs to be buried deep inside the node tree, so I added a new div to the index.html below the `<div id="root"></div>`, and named it `<div id="portal"></div>`.
+Next I created a Portal.js inside the Utilities folder, which grabs the portal div, appends it, and uses the ReactDOM.createPortal() method to hoist the modal out of the DOM hierarchy.
+`<Portal>{...}</Portal>` wraps the Modal.js to complete the implementation. 
+
+I wanted to separate the logic from the rendering components, so hence the Utilities folder. Toggle.js is also there, which handles the Modal open/close.
+
+App.js, ModalPage.js, and Modal.js comprises the rendering components tree.
+
+Finally, styled-components is dope and is a super clean way to add a finish coat to the UI.
+
+## In your terminal:
+
+`git clone https://github.com/domobritton/react-modal.git`
+`yarn`
+`yarn start`
+
+
+# Other create-react-app info
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
