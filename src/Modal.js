@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { memo } from 'react';
 import styled from 'styled-components';
+
 import { Portal, absolute } from './Utilities';
 
-export const Modal = React.memo(({ children, toggle, on }) => ( 
+export const Modal = memo(({ children, toggle, on }) => ( 
     <Portal>
         {on && 
         <ModalWrapper>
