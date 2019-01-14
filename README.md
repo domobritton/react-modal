@@ -4,6 +4,7 @@ This is a simple React utility for implementing Modals.
 
 Feel free to fork, clone and make your own.
 
+[Codesandbox url](https://codesandbox.io/s/github/domobritton/react-modal/tree/master/)
 ## A Walk Through the Files
 
 I didn't want the Modal divs to be buried deep inside the node tree, so I added a new div to the index.html below the `<div id="root"></div>`, and named it `<div id="portal"></div>`.
